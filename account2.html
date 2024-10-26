@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link href="assets/css/aos.css" rel="stylesheet" />
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <title>Log in</title>
+</head>
+
+<body> 
+    <div id="navbarPlaceholder"></div>
+    <a data-aos="zoom-up" href="index.html" class="exit" ><i class="fa-solid fa-door-open iconexit" style="color:#030f16 ; size: 100px;"></i></a>
+    <div data-aos="zoom-in">
+        <div class="containers" id="container">  
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Đăng Ký</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon">
+                            <i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="icon">
+                            <i class="fa-brands fa-facebook"></i></a>
+                        <!-- <a href="#" class="icon">
+                            <i class="fa-brands fa-github"></i></a> -->
+                        <!-- <a href="#" class="icon"> -->
+                            <!-- <i class="fa-brands fa-linkedin-in"></i></a> -->
+                    </div>
+                    <span>hoặc sử dụng phương thức khác để đăng ký</span>
+                    <input id="regisName" type="text" placeholder="Name">
+                    <input id="regisEmail" type="email" placeholder="Email">
+                    <input id="regisPassword" type="password" placeholder="Password">
+                    <button id="register-main" class="btn" type="button">Đăng ký</button>
+                </form>
+                <dialog id="noti">
+                    <p><b>Đăng ký thành công. Vui lòng đăng nhập!</b></p>
+                    <button id="closeDia" >OK</button>
+                </dialog> 
+            </div>
+            <div class="form-container sign-in">
+                <form action="index.html">
+                    <h1>Đăng Nhập</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon">
+                            <i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="icon">
+                            <i class="fa-brands fa-facebook"></i></a>
+                        <!-- <a href="#" class="icon">
+                            <i class="fa-brands fa-github"></i></a> -->
+                        <!-- <a href="#" class="icon">
+                            <i class="fa-brands fa-linkedin-in"></i></a> -->
+                    </div>
+                    <span>hoặc sử dụng phương thức khác để đăng nhập</span>
+                    <input id="loginEmail" type="email" placeholder="Email">
+                    <input id="loginPassword" type="password" placeholder="Password">
+                    <a href="#" style="text-decoration: underline;">Quên mật khẩu?</a>
+                    <button  id="login-main" class="btn" type="submit">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <img src="assets/images/logo.png" style="max-width: 200px; margin-bottom: 40px;" alt="TRAVIZARD">
+                        <h1 class="text-white">Chào mừng bạn</h1>
+                        <p>Bạn đã có tài khoản? Hãy đăng nhập!</p>
+                        <button  class="hidden btn" id="login">
+                            Đăng nhập
+                        </button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <img src="assets/images/logo.png" style="max-width: 200px; margin-bottom: 40px;" alt="TRAVIZARD">
+                        <h1 class="text-white">Xin chào</h1>
+                        <p>Đăng ký nếu bạn chưa có tài khoản</p>
+                        <button class="hidden btn" id="register">
+                            Đăng ký
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        AOS.init();
+        //Xử lí đăng nhập đăng ký
+        function login() {
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+            const emailFormat = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+
+            if(!emailFormat.test(email)){
+                Swal
+            }
+        }
+    </script>
+
+    
+    <script>
+        //Xử lí chuyển động login
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+        });
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+        });
+        
+        
+        </script>
+</body>
+
+</html>
